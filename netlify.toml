@@ -1,4 +1,4 @@
 [build]
   base = "ui/"
   publish = "build"
-  command = "cd ./ui && npm run build"
+  command = "npm run build"
