@@ -1,4 +1,4 @@
-const neo4j = require('neo4j-driver').v1;
+const neo4j = require('neo4j-driver');
 
 var neo_uri = process.env.GRAPHENEDB_BOLT_URL
 var neo_user = process.env.GRAPHENEDB_BOLT_USER
@@ -20,7 +20,7 @@ exports.handler = async (event, context) => {
     RETURN joke
   `
   try {
-    const result = await aneo4jSession.run(query, {offset: numJokes})
+    const result = await neo4jSession.run(query, {offset: numJokes})
       .then(result => {
       console.log(result.records[0].get('joke').properties);
       return result.records[0].get('joke').properties;
