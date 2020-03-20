@@ -2,7 +2,7 @@
 const fetch = require('node-fetch')
 exports.handler = async function(event, context) {
   try {
-    const response = await fetch('https://jujujokes.herokuapp.com/api/public', {
+    const response = await fetch('https://jujujokes.herokuapp.com/api/public/', {
       headers: { Accept: 'application/json' }
     })
     if (!response.ok) {
