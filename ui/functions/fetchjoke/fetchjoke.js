@@ -20,7 +20,7 @@ exports.handler = async (event, context) => {
     RETURN joke
   `
   try {
-    const result = await neo4jSession.run(query, {offset: numJokes})
+    const result = await neo4jSession.run(query)
       .then(result => {
       console.log(result.records[0].get('joke').properties);
       return result.records[0].get('joke').properties;
