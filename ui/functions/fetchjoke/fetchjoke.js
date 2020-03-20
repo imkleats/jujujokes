@@ -1,12 +1,11 @@
 const neo4j = require('neo4j-driver');
 
-var neo_uri = process.env.GRAPHENEDB_BOLT_URL
-var neo_user = process.env.GRAPHENEDB_BOLT_USER
-var neo_pw = process.env.GRAPHENEDB_BOLT_PASSWORD
-
-var driver = neo4j.driver(neo_uri, neo4j.auth.basic(neo_user, neo_pw));
-
 exports.handler = async (event, context) => {
+  var neo_uri = process.env.GRAPHENEDB_BOLT_URL
+  var neo_user = process.env.GRAPHENEDB_BOLT_USER
+  var neo_pw = process.env.GRAPHENEDB_BOLT_PASSWORD
+  
+  var driver = neo4j.driver(neo_uri, neo4j.auth.basic(neo_user, neo_pw));
   console.log('protected function!')
   // Reading the context.clientContext will give us the current user
   //const claims = context.clientContext && context.clientContext.user
