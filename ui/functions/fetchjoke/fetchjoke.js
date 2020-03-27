@@ -1,4 +1,4 @@
-const neo4j = require('neo4j-driver');
+const neo4j = require('neo4j-driver').v1;
 const _ = require('lodash');
 
 const getRandomJoke = async (session) => {
