@@ -1,8 +1,8 @@
 {
-  "name": "fetchjoke",
+  "name": "juju-graphql",
   "version": "1.0.0",
-  "description": "graphene db api fetch",
-  "main": "fetchjoke.js",
+  "description": "mongo graphql endpoint",
+  "main": "graphql.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "npm install"
@@ -15,7 +15,5 @@
   "author": "Netlify",
   "license": "MIT",
   "dependencies": {
-    "lodash": "^4.17.15",
-    "neo4j-driver": "^4.0.0"
   }
 }
