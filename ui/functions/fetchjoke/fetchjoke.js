@@ -32,6 +32,9 @@ exports.handler = async (event, context) => {
   }
   //var driver = neo4j.driver(neo_uri, neo4j.auth.basic(neo_user, neo_pw));
   console.log('protected function!')
+  console.log(neo_uri)
+  console.log(neo_user)
+  console.log(neo_pw)
   // Reading the context.clientContext will give us the current user
   //const claims = context.clientContext && context.clientContext.user
   //console.log('user claims', claims)
