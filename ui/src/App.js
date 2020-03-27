@@ -27,10 +27,11 @@ function App() {
 
   const getRandomJoke = () => {
     fetch('/.netlify/functions/fetchjoke')
+    .then(response => response.json())
     .then(result => {
       console.log('Logging the fetch: ', result)
-      //setRandomSetup(result.data.setup);
-      //setRandomPunchline(result.data.punchline);
+      setRandomSetup(result.data.setup);
+      setRandomPunchline(result.data.punchline);
     });
   };
 
