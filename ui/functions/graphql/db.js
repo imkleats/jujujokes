@@ -10,7 +10,6 @@ const mongoDb = mongoose.connect(process.env.MONGODB_URI, {
         useFindAndModify: false,
         ssl: true
     });
-//mongoDb.connection.on('error', console.error.bind(console, 'MongoDB connection error: '));
 
 const models = { User, Joke };
 
