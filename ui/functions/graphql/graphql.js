@@ -4,7 +4,7 @@ const typeDefs = require('./typeDefs');
 const resolvers = require('./resolvers');
 const {mongoDb, models} = require('./db')
 
-const server = ApolloServer({
+const server = new ApolloServer({
     typeDefs,
     resolvers,
     context: ({ event, context }) => {
