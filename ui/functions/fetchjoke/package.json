@@ -15,7 +15,7 @@
   "author": "Netlify",
   "license": "MIT",
   "dependencies": {
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.19",
     "neo4j-driver": "1.7.6"
   }
 }
